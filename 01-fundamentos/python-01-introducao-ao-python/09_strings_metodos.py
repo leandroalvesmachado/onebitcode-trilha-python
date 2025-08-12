@@ -36,7 +36,11 @@ print(game_description.count('a'))
 print(game_description.count('A'))
 
 # Substitui "Fifa" por "Pes" na descrição
-print(game_description.replace("Fifa", "Pes"))
+print(game_name.replace("Fifa", "Pes"))
 
 # Divide o texto em uma lista, usando a vírgula como separador
+# [
+#   'Fifa 23 é um jogo de futebol desenvolvido pela EA Sports',
+#   'e que possibilita jogar localmente ou online.'
+# ]
 print(game_description.split(','))
