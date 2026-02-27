@@ -10,6 +10,23 @@ def add_contact():
     with open("contatos.txt", "a", encoding="utf-8") as file:
         file.write(contact)
 
-def view_contact():
+def view_contacts():
     if not os.path.exists("contatos.txt"):
         print("Lista de contatos está vazia")
+        return
+
+    with open("contatos.txt", "r", encoding="utf-8") as file:
+        contacts = file.read()
+    
+    print("Lista de Contatos")
+    print(contacts)
+
+def delete_contacts():
+    if not os.path.exists("contatos.txt"):
+        print("Lista de contatos está vazia")
+        return
+
+    with open("contatos.txt", "w", encoding="utf-8") as file:
+        file.write("")
+    
+    print("Contatos deletados com sucesso")
